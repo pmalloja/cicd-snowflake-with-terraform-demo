@@ -6,6 +6,8 @@ variable "database" {
 variable "env_name" {
   type    = string
   default = "STAGING"
+  #default = "Stage"
+  
 }
 
 variable "snowflake_private_key" {
