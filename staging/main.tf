@@ -7,20 +7,18 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "<your-bucket-name>"
+    bucket         = "snowgittfpoc"
     key            = "terraform-staging.tfstate"
-    region         = "<bucket-region>"
-    # Optional DynamoDB for state locking. See https://developer.hashicorp.com/terraform/language/settings/backends/s3 for details.
-    # dynamodb_table = "terraform-state-lock-table"
+    region         = "us-east-1"
     encrypt        = true
-    role_arn       = "arn:aws:iam::<your-aws-account-no>:role/<terraform-s3-backend-access-role>"
+    role_arn       = "arn:aws:iam::225989372755:role/terraform-s3-backend-access-role"
   }
 }
 
 provider "snowflake" {
-  username    = "<your_snowflake_username>"
-  account     = "<your_snowflake_account_identifier>"
-  role        = "<your_snowflake_role>"
+  username    = "tf-snow"
+  account     = "axb59546"
+  role        = "TF_DEMO_READER"
   private_key = var.snowflake_private_key
 }
 
