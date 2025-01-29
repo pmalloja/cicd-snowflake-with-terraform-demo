@@ -18,7 +18,7 @@ terraform {
 provider "snowflake" {
   username    = "tf-snow"
   account     = "axb59546"
-  role        = "SYSADMIN"
+  role        = "TF_DEMO_READER"
   private_key = var.snowflake_private_key
 }
 
