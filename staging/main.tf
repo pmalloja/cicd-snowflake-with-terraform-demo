@@ -11,6 +11,7 @@ terraform {
     key     = "terraform-staging.tfstate"
     region  = "us-east-1"
     encrypt = true
+
     #role_arn  = "arn:aws:iam::225989372755:role/terraform-s3-backend-access-role"
   }
 }
