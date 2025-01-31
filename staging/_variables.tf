@@ -1,6 +1,6 @@
 variable "database" {
   type    = string
-  default = "TERRAFORM_DEMO_STAGING"
+  default = "TERRAFORM_DEMO_STAGING1"
 }
 
 variable "env_name" {
